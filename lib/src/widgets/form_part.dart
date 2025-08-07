@@ -362,29 +362,29 @@ class __FormPartState extends State<_FormPart> {
             ],
             textInputType: TextInputType.name,
           ),
-        CustomTextFormField(
-          controller: _emailController,
-          hintText: loginTexts.emailHint,
-          prefixIcon: Icons.email_outlined,
-          prefixWidget: loginTheme.emailIcon,
-          validator: _emailValidator,
-          textInputAction: TextInputAction.next,
-          onChanged: auth.setEmail,
-          autofillHints: const <String>[AutofillHints.email],
-          textInputType: TextInputType.emailAddress,
-        ),
-        ObscuredTextFormField(
-          controller: _passwordController,
-          hintText: loginTexts.passwordHint,
-          prefixIcon: Icons.password_outlined,
-          showPasswordVisibility: widget.showPasswordVisibility,
-          textInputAction:
-              auth.isSignup ? TextInputAction.next : TextInputAction.done,
-          onFieldSubmitted: (_) =>
-              auth.isSignup ? _confirmPasswordFocus.requestFocus() : _action(),
-          onChanged: auth.setPassword,
-          validator: _passwordValidator,
-        ),
+        // CustomTextFormField(
+        //   controller: _emailController,
+        //   hintText: loginTexts.emailHint,
+        //   prefixIcon: Icons.email_outlined,
+        //   prefixWidget: loginTheme.emailIcon,
+        //   validator: _emailValidator,
+        //   textInputAction: TextInputAction.next,
+        //   onChanged: auth.setEmail,
+        //   autofillHints: const <String>[AutofillHints.email],
+        //   textInputType: TextInputType.emailAddress,
+        // ),
+        // ObscuredTextFormField(
+        //   controller: _passwordController,
+        //   hintText: loginTexts.passwordHint,
+        //   prefixIcon: Icons.password_outlined,
+        //   showPasswordVisibility: widget.showPasswordVisibility,
+        //   textInputAction:
+        //       auth.isSignup ? TextInputAction.next : TextInputAction.done,
+        //   onFieldSubmitted: (_) =>
+        //       auth.isSignup ? _confirmPasswordFocus.requestFocus() : _action(),
+        //   onChanged: auth.setPassword,
+        //   validator: _passwordValidator,
+        // ),
         if (!_isReverse && widget.signUpMode != SignUpModes.name)
           ObscuredTextFormField(
             controller: _confirmPasswordController,
